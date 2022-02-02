@@ -10,15 +10,27 @@ using System.Windows.Forms;
 
 namespace CrapsDice
 {
-    public partial class Form1 : Form
+    public partial class Craps : Form
     {
-        public Form1()
+        public Craps()
         {
             InitializeComponent();
         }
 
+        int dice1 = 0;
+        int dice2 = 0;
+
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        void NewGame()
+        {
+            Random diceRoll = new Random();
+            dice1 = diceRoll.Next(1, 6);
+            dice2 = diceRoll.Next(1, 6);
+
 
         }
     }
