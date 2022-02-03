@@ -20,11 +20,6 @@ namespace CrapsDice
         int dice1 = 0;
         int dice2 = 0;
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         void NewGame()
         {
             Random diceRoll = new Random();
