@@ -184,7 +184,7 @@ namespace CrapsDice
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-
+            NewGame();
         }
 
         private void btnRules_Click(object sender, EventArgs e)
@@ -194,7 +194,7 @@ namespace CrapsDice
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 
