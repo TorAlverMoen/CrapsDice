@@ -21,8 +21,6 @@ namespace CrapsDice
         {
             dice[0] = 0;
             dice[1] = 0;
-            DisplayDiceNumber(pictureBox1, 0);
-            DisplayDiceNumber(pictureBox2, 0);
 
             CurrentDiceSum = 0;
             PreviousDiceSum = 0;
@@ -48,6 +46,7 @@ namespace CrapsDice
         private void Craps_Load(object sender, EventArgs e)
         {
             NewGame();
+            DisplayEmptyDice();
         }
 
         int GetDiceSum(int InDice1, int InDice2)
@@ -83,12 +82,17 @@ namespace CrapsDice
             }
         }
 
+        void DisplayEmptyDice()
+        {
+            DisplayDiceNumber(pictureBox1, 0);
+            DisplayDiceNumber(pictureBox2, 0);
+        }
+
         void Winner()
         {
             if (!bIsFirstTurn)
             {
-                MessageBox.Show($"You win with {Points} points in {Turn} turns.\n" +
-                    "(Number of point this turn is the same as in previous turn)", "You win!", MessageBoxButtons.OK);
+                MessageBox.Show($"You win with {Points} points in {Turn} turns.", "You win!", MessageBoxButtons.OK);
             }
             else
             {
@@ -184,6 +188,7 @@ namespace CrapsDice
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             NewGame();
+            DisplayEmptyDice();
         }
 
         private void btnRules_Click(object sender, EventArgs e)

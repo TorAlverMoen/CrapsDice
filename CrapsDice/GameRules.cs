@@ -14,8 +14,8 @@ namespace CrapsDice
                 "- If the come-out roll is 2, 3 or 12, the player loses.\n" +
                 "- If the roll is any other value, it establishes the value as points.\n\n" +
                 "After the first turn (with established points), the rules are:\n" +
-                "- If, with a point established, that point is rolled again before a 7, the player wins.\n" +
-                "- If, with a point established, a 7 is rolled before the point is rolled again, the player loses.\n";
+                "- If, with a point established, that point is rolled again before a 7,\n   the player wins.\n" +
+                "- If, with a point established, a 7 is rolled before the point is rolled again,\n   the player loses.";
         }
 
         public string AssemblyTitle

@@ -34,13 +34,15 @@
             // 
             // textBox
             // 
-            this.textBox.BackColor = System.Drawing.Color.Gray;
+            this.textBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.textBox.Location = new System.Drawing.Point(9, 9);
+            this.textBox.Margin = new System.Windows.Forms.Padding(10);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(550, 150);
+            this.textBox.Size = new System.Drawing.Size(441, 162);
             this.textBox.TabIndex = 1;
             this.textBox.Text = "";
             // 
@@ -49,7 +51,7 @@
             this.btnOk.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnOk.Location = new System.Drawing.Point(456, 169);
+            this.btnOk.Location = new System.Drawing.Point(350, 184);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(100, 30);
             this.btnOk.TabIndex = 2;
@@ -62,7 +64,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(568, 211);
+            this.ClientSize = new System.Drawing.Size(459, 222);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.textBox);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
