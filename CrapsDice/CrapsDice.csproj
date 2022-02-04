@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dice.ico" />
+    <None Include="Resources\AboutBackground.png" />
     <None Include="Resources\6.png" />
     <None Include="Resources\5.png" />
     <None Include="Resources\4.png" />

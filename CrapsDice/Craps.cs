@@ -24,7 +24,7 @@ namespace CrapsDice
         int Points = 0;
         bool bIsFirstTurn = true;
 
-        void NewGame()
+        void NewGame()  // Reset variables for a new game
         {
             dice[0] = 0;
             dice[1] = 0;
@@ -93,36 +93,73 @@ namespace CrapsDice
 
         void Loser()
         {
-            MessageBox.Show($"Sorry! You lost the game!", "You lost!", MessageBoxButtons.OK);
+            if (!bIsFirstTurn)
+            {
+                MessageBox.Show("Sorry! You rolled seven and lost the game!", "You lost!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show($"Sorry! You lost the game!", "You lost!", MessageBoxButtons.OK);
+            }
             NewGame();
         }
 
         void GameLoop()     // called every time the player rolls the dice
         {
-            Turn++;
-            DisplayTurns(Turn);
+            Turn++;                                         // Update and
+            DisplayTurns(Turn);                             // display the number of turns
 
             Random diceRoll = new Random();
 
-            dice[0] = diceRoll.Next(1, 6);
-            dice[1] = diceRoll.Next(1, 6);
+            dice[0] = diceRoll.Next(1, 6);                  // "roll" dice one
+            dice[1] = diceRoll.Next(1, 6);                  // "roll" dice two
 
-            DisplayDiceNumber(pictureBox1, dice[0]);
-            DisplayDiceNumber(pictureBox2, dice[1]);
+            DisplayDiceNumber(pictureBox1, dice[0]);        // Display the result of dice one roll
+            DisplayDiceNumber(pictureBox2, dice[1]);        // Display the result of dice two roll
 
-            CurrentDiceSum = GetDiceSum(dice[0], dice[1]);
+            CurrentDiceSum = GetDiceSum(dice[0], dice[1]);  // Get the sum of the two dice
 
-            if (bIsFirstTurn)
+            if (bIsFirstTurn)                               // The rules are different for the first turn
             {
                 bIsFirstTurn = false;
 
+                // check win conditions
+                if ((CurrentDiceSum == 7) || (CurrentDiceSum == 11))
+                {
+                    Winner();
+                }
+
+                // check lose conditions
+                if ((CurrentDiceSum == 2) || (CurrentDiceSum == 3) || (CurrentDiceSum == 12))
+                {
+                    Loser();
+                }
+
+                PreviousDiceSum = CurrentDiceSum;
+            }
+            else
+            {
+                // check win condition
+                if (PreviousDiceSum == CurrentDiceSum)
+                {
+                    Winner();
+                }
+
+                // check lose condition
+                if (CurrentDiceSum == 7)
+                {
+                    Loser();
+                }
             }
 
+            // Update the number of points
             Points = Points + CurrentDiceSum;
             DisplayPoints(Points);
 
-            // roll again
+            // Prepare for the next roll
             PreviousDiceSum = CurrentDiceSum;
+
+            // End the game loop and return control to the player for the next roll
         }
 
         private void btnRoll_Click(object sender, EventArgs e)
