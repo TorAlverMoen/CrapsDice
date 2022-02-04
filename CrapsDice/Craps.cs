@@ -28,6 +28,8 @@ namespace CrapsDice
         {
             dice[0] = 0;
             dice[1] = 0;
+            DisplayDiceNumber(pictureBox1, 0);
+            DisplayDiceNumber(pictureBox2, 0);
 
             CurrentDiceSum = 0;
             PreviousDiceSum = 0;
@@ -64,6 +66,9 @@ namespace CrapsDice
         {
             switch (DiceNumber)
             {
+                case 0:
+                    InPictureBox.Image = Properties.Resources._0;
+                    break;
                 case 1:
                     InPictureBox.Image = Properties.Resources._1;
                     break;
