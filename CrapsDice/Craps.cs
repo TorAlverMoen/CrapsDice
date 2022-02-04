@@ -89,7 +89,8 @@ namespace CrapsDice
         {
             if (!bIsFirstTurn)
             {
-                MessageBox.Show($"You win with {Points} points in {Turn} turns.", "You win!", MessageBoxButtons.OK);
+                MessageBox.Show($"You win with {Points} points in {Turn} turns.\n" +
+                    "(Number of point this turn is the same as in previous turn)", "You win!", MessageBoxButtons.OK);
             }
             else
             {
@@ -178,7 +179,7 @@ namespace CrapsDice
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            AboutBox1 aboutCrapsDice = new AboutBox1();
+            AboutBox aboutCrapsDice = new AboutBox();
             aboutCrapsDice.ShowDialog();
         }
 
