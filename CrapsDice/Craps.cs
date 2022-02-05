@@ -130,6 +130,10 @@ namespace CrapsDice
 
             CurrentDiceSum = GetDiceSum(dice[0], dice[1]);  // Get the sum of the two dice
 
+            // Update the number of points
+            Points = Points + CurrentDiceSum;
+            DisplayPoints(Points);
+
             if (bIsFirstTurn)                               // The rules are different for the first turn
             {
                 // check win conditions
@@ -161,10 +165,6 @@ namespace CrapsDice
                     Loser();
                 }
             }
-
-            // Update the number of points
-            Points = Points + CurrentDiceSum;
-            DisplayPoints(Points);
 
             // Prepare for the next roll
             PreviousDiceSum = CurrentDiceSum;
