@@ -82,6 +82,12 @@ namespace CrapsDice
             }
         }
 
+        void DisplaySnakeEyes()
+        {
+            pictureBox1.Image = Properties.Resources._1_snake_eye;
+            pictureBox2.Image = Properties.Resources._1_snake_eye;
+        }
+
         void DisplayEmptyDice()
         {
             DisplayDiceNumber(pictureBox1, 0);
@@ -133,6 +139,11 @@ namespace CrapsDice
             // Update the number of points
             Points = Points + CurrentDiceSum;
             DisplayPoints(Points);
+
+            if ((dice[0] == 1) && (dice[1] == 1))
+            {
+                DisplaySnakeEyes();
+            }
 
             if (bIsFirstTurn)                               // The rules are different for the first turn
             {

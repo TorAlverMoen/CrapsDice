@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>dice.ico</ApplicationIcon>
+    <ApplicationIcon>dice_gray.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -103,6 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dice.ico" />
+    <Content Include="dice_gray.ico" />
+    <None Include="Resources\1_snake_eye.png" />
     <None Include="Resources\0.png" />
     <None Include="Resources\AboutBackground.png" />
     <None Include="Resources\6.png" />
