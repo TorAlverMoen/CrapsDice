@@ -115,6 +115,10 @@ namespace CrapsDice
             }
             else
             {
+                if (CurrentDiceSum == 2)
+                {
+                    MessageBox.Show($"Sorry! You rolled snake eyes in the first turn and lost the game!", "You lost!", MessageBoxButtons.OK);
+                }
                 MessageBox.Show($"Sorry! You rolled {CurrentDiceSum} in the first turn and lost the game!", "You lost!", MessageBoxButtons.OK);
             }
             NewGame();
@@ -142,10 +146,6 @@ namespace CrapsDice
 
             if (bIsFirstTurn)                               // The rules are different for the first turn
             {
-                if ((dice[0] == 1) && (dice[1] == 1))       // Snake eyes
-                {
-                    DisplaySnakeEyes();
-                }
 
                 // check win conditions
                 if ((CurrentDiceSum == 7) || (CurrentDiceSum == 11))
@@ -156,6 +156,10 @@ namespace CrapsDice
                 // check lose conditions
                 if ((CurrentDiceSum == 2) || (CurrentDiceSum == 3) || (CurrentDiceSum == 12))
                 {
+                    if (CurrentDiceSum == 2)                // Snake eyes
+                    {
+                        DisplaySnakeEyes();
+                    }
                     Loser();
                 }
 
