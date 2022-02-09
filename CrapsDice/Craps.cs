@@ -119,7 +119,10 @@ namespace CrapsDice
                 {
                     MessageBox.Show($"Sorry! You rolled snake eyes in the first turn and lost the game!", "You lost!", MessageBoxButtons.OK);
                 }
-                MessageBox.Show($"Sorry! You rolled {CurrentDiceSum} in the first turn and lost the game!", "You lost!", MessageBoxButtons.OK);
+                else
+                {
+                    MessageBox.Show($"Sorry! You rolled {CurrentDiceSum} in the first turn and lost the game!", "You lost!", MessageBoxButtons.OK);
+                }
             }
             NewGame();
         }
