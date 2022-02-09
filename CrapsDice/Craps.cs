@@ -145,7 +145,6 @@ namespace CrapsDice
 
             // Update the number of points
             Points = Points + CurrentDiceSum;
-            DisplayPoints(Points);
 
             if (bIsFirstTurn)                               // The rules are different for the first turn
             {
@@ -153,6 +152,7 @@ namespace CrapsDice
                 // check win conditions
                 if ((CurrentDiceSum == 7) || (CurrentDiceSum == 11))
                 {
+                    DisplayPoints(Points);
                     Winner();
                 }
 
@@ -174,6 +174,7 @@ namespace CrapsDice
                 // check win condition
                 if (PreviousDiceSum == CurrentDiceSum)
                 {
+                    DisplayPoints(Points);
                     Winner();
                 }
 
@@ -183,6 +184,8 @@ namespace CrapsDice
                     Loser();
                 }
             }
+
+            DisplayPoints(Points);
 
             // Prepare for the next roll
             PreviousDiceSum = CurrentDiceSum;
