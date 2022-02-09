@@ -140,13 +140,13 @@ namespace CrapsDice
             Points = Points + CurrentDiceSum;
             DisplayPoints(Points);
 
-            if ((dice[0] == 1) && (dice[1] == 1))
-            {
-                DisplaySnakeEyes();
-            }
-
             if (bIsFirstTurn)                               // The rules are different for the first turn
             {
+                if ((dice[0] == 1) && (dice[1] == 1))       // Snake eyes
+                {
+                    DisplaySnakeEyes();
+                }
+
                 // check win conditions
                 if ((CurrentDiceSum == 7) || (CurrentDiceSum == 11))
                 {
