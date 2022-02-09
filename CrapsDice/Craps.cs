@@ -128,8 +128,8 @@ namespace CrapsDice
 
             Random diceRoll = new Random();
 
-            dice[0] = diceRoll.Next(1, 6);                  // roll dice one
-            dice[1] = diceRoll.Next(1, 6);                  // roll dice two
+            dice[0] = diceRoll.Next(1, 7);                  // roll dice one
+            dice[1] = diceRoll.Next(1, 7);                  // roll dice two
 
             DisplayDiceNumber(pictureBox1, dice[0]);        // Display the result of dice one roll
             DisplayDiceNumber(pictureBox2, dice[1]);        // Display the result of dice two roll
