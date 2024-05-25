@@ -93,7 +93,7 @@
             // 
             // labelTurns
             // 
-            this.labelTurns.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.labelTurns.BackColor = System.Drawing.SystemColors.ControlLight;
             this.labelTurns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelTurns.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelTurns.Location = new System.Drawing.Point(26, 30);
@@ -115,7 +115,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(26, 100);
